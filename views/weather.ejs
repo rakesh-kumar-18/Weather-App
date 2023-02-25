@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        letter-spacing: 4px;
+        font-size: 18px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .main-part {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    h1 {
+        color: #142850;
+        font-size: 56px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 6px 36px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background: transparent;
+        cursor: pointer;
+        font-size: inherit;
+        letter-spacing: 2px;
+    }
+
+    button:hover {
+        background-color: #000;
+        color: #fff;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        border: 1px solid transparent;
+    }
+
+    .footer {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="main-part">
+            <h1>WEATHER DETAILS</h1>
+            <h3>The temperature in <%=city %> is <%=temperature%> degrees Celsius.</h3>
+            <p>The Weather is currently <%=explain%>.</p>
+            <img src="<%=image%>">
+            <form action="/failure" method="post">
+                <button type="submit">BACK</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <h5>Made by Rakesh Kumar</h5>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
